@@ -1,75 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <form >
+    <form>
+        <!-- Información Personal -->
         <fieldset>
-            <div  style = " text-align : center " >
+            <div style="text-align: center;">
                 <h1>Eafit</h1>
             </div>
-                
-                <label for="Name">Nombre :</label><br>
-                <input type="text" id="Name" name="Name" placeholder="Primeros nombres" required><br>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" placeholder="Primeros nombres" required><br>
 
-                <label for="Name">Apellido :</label><br>
-                <input type="text" id="Name" name="Name" placeholder="Apellidos" required><br>
-                
-                <label for="brithday">Fecha de Nacimiento :</label><br>
-                <input type="date" id="brithday" name="brithday" required><br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellidos" required><br>
 
-                <label for="email">Correo :</label><br>
-                <input type="email" id="email" name="email" placeholder="Correo" required><br>
+            <label for="birthday">Fecha de Nacimiento:</label><br>
+            <input type="date" id="birthday" name="birthday" required><br>
 
-                <label for="Name">dirección :</label><br>
-                <input type="text" id="Name" name="Name" placeholder="dirección" required><br>
+            <label for="email">Correo:</label><br>
+            <input type="email" id="email" name="email" placeholder="Correo" required><br>
 
-                <label for="Name">departamento :</label><br>
-                <input type="text" id="Name" name="Name" placeholder="departamento" required><br>
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección" required><br>
 
-                <label for="country">Pais :</label><br>
-                <input type="text" id="country" name="country" placeholder="Pais" required><br>
-                
-                <label for="tel">Telefono :</label><br>
-                <input type="tel" id="tel" name="tel" placeholder="Telefono" required minlength="9" maxlength="10" size="10" required><br>
+            <label for="departamento">Departamento:</label><br>
+            <input type="text" id="departamento" name="departamento" placeholder="Departamento" required><br>
 
-                <label for="description">Descripcion :</label><br>
-                <textarea name="description" id="description" cols="30" rows="10" minlength="1" maxlength="300" size="10" placeholder="Descripcion"></textarea><br>
+            <label for="pais">País:</label><br>
+            <input type="text" id="pais" name="pais" placeholder="País" required><br>
+
+            <label for="tel">Teléfono:</label><br>
+            <input type="tel" id="tel" name="tel" placeholder="Teléfono" minlength="9" maxlength="10" size="10" required><br>
+
+            <label for="descripcion">Descripción:</label><br>
+            <textarea id="descripcion" name="descripcion" cols="30" rows="5" minlength="1" maxlength="300" placeholder="Descripción"></textarea><br>
         </fieldset>
 
+        <!-- Carrera Deseada -->
         <fieldset>
-            <legend> ¿qué carrera deseas inscribirte?</legend>
-
-            <input type="radio" id="Exploración de datos">
-            <label for="Exploración de datos">Exploración de datos</label><br>
+            <legend>¿Qué carrera deseas inscribirte?</legend>
+            <input type="radio" id="exploracion" name="carrera" value="Exploración de datos" required>
+            <label for="exploracion">Exploración de datos</label><br>
             
-            <input type="radio" id="Minería y modelos aplicados">
-            <label for="Minería y modelos aplicados">Minería y modelos aplicados</label><br>
+            <input type="radio" id="mineria" name="carrera" value="Minería y modelos aplicados">
+            <label for="mineria">Minería y modelos aplicados</label><br>
 
-            <input type="radio" id="NumPy">
-            <label for="NumPy">NumPy</label><br>
+            <input type="radio" id="numpy" name="carrera" value="NumPy">
+            <label for="numpy">NumPy</label><br>
 
-            <input type="radio" id="Pandas">
-            <label for="Pandas">Pandas</label><br>
+            <input type="radio" id="pandas" name="carrera" value="Pandas">
+            <label for="pandas">Pandas</label><br>
 
-            <input type="radio" id="Seaborn">
-            <label for="Seaborn">Seaborn</label><br>
+            <input type="radio" id="seaborn" name="carrera" value="Seaborn">
+            <label for="seaborn">Seaborn</label><br>
 
-            <input type="radio" id="Frontend">
-            <label for="Frontend">Frontend</label><br>
+            <input type="radio" id="frontend" name="carrera" value="Frontend">
+            <label for="frontend">Frontend</label><br>
 
-            <label for="other">otro :</label><br>
-            <textarea name="other" id="other" cols="35" rows="2"required minlength="1" maxlength="300" size="10" placeholder="otro"></textarea><br>
-            
-            <label for="In person"> Presencial</label>
-            <input type="radio" id="In person"><br>
-
-            <label for=" Online"> Virtual</label>
-            <input type="radio" id=" Online"><br>
+            <label for="other">Otro:</label><br>
+            <textarea id="other" name="other" cols="35" rows="2" minlength="1" maxlength="300" placeholder="Otro"></textarea><br>
         </fieldset>
-        <br>
+
+        <!-- Modalidad -->
+        <fieldset>
+            <legend>Modalidad</legend>
+            <input type="radio" id="presencial" name="modalidad" value="Presencial" required>
+            <label for="presencial">Presencial</label><br>
+
+            <input type="radio" id="virtual" name="modalidad" value="Virtual">
+            <label for="virtual">Virtual</label><br>
+        </fieldset>
+
+        <!-- Botones -->
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
     </form>
