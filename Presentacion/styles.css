@@ -9,8 +9,32 @@ body {
     height: 100vh;
 }
 
+.resume > h1{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: serif, sans-serif;
+}
+
+.card-content > h1{
+    text-align: center;
+    font-size: 28px;
+    text-decoration: underline;
+    font-family: serif, sans-serif;
+}
+
+.card-content > p{
+    text-align: left;
+    font-size: 14px;
+    flex-direction: row;
+}
+
+h2{
+    font-family: serif, sans-serif;
+}
+
 #app {
-    background: #fff;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -18,56 +42,93 @@ body {
     text-align: center;
 }
 
+.resume > p{
+    display: flex;
+    text-align: left;
+    font-size: 15px;
+}
+
+.resume > div > ul > li{
+    text-align: start;
+    font-size: 15px;
+}
+
 .card-content {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(rgb(14, 99, 184), rgb(197, 201, 212));
     display: flex;
     flex-direction: column;
-    align-items: center;
+    grid-column: auto;
+    width: 400px;
+    height: 320px;
+}
+
+.resume{
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    background: #007bff;
-    color: white;
+    background: #05cf27;
+    color: rgb(246, 244, 244);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px #05cf27;
     transition: all 0.3s ease-in-out;
 }
 
 @keyframes hoverEffect {
     0% {
         transform: translateY(0) scale(1);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px #0056b3;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px #05cf27;
     }
     50% {
         transform: translateY(-2px) scale(1.03);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 3px #0056b3;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 3px #05cf27;
     }
     100% {
         transform: translateY(-4px) scale(1.05);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), 0 4px #0056b3;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), 0 4px #05cf27;
     }
 }
 
 @keyframes activeEffect {
     0% {
         transform: translateY(-4px) scale(1.05);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), 0 4px #0056b3;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), 0 4px #05cf27;
     }
     100% {
         transform: translateY(2px) scale(1);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px #0056b3;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px #05cf27;
     }
 }
 
 button:hover {
     animation: hoverEffect 0.3s forwards;
-    background: #0056b3;
+    background: #05cf27;
 }
 
 button:active {
     animation: activeEffect 0.2s forwards;
+}
+
+.resume-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.resume-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.resume-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
