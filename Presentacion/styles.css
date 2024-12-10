@@ -27,25 +27,32 @@ body {
     text-align: left;
     font-size: 14px;
     flex-direction: row;
+    margin: 5px;
 }
 
 h2{
     font-family: serif, sans-serif;
+    margin: 2px;
 }
 
 #app {
-    background: #ffffff;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    width: 90%;
     max-width: 400px;
-    text-align: center;
+    min-height: 20vh;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .resume > p{
     display: flex;
     text-align: left;
     font-size: 15px;
+    margin: 5px;
 }
 
 .resume > div > ul > li{
@@ -60,7 +67,7 @@ h2{
     flex-direction: column;
     grid-column: auto;
     width: 400px;
-    height: 320px;
+    height: 250px;
 }
 
 .resume{
@@ -107,6 +114,17 @@ button {
     }
 }
 
+@media (max-width: 1080px) {
+    #app {
+        padding: 10px;
+        width: 95%; /* Más ancho en pantallas pequeñas */
+    }
+
+    .card-content {
+        flex-direction: column; /* Apilar elementos en lugar de alinearlos horizontalmente */
+        text-align: center;
+    }
+}
 button:hover {
     animation: hoverEffect 0.3s forwards;
     background: #05cf27;
@@ -114,21 +132,4 @@ button:hover {
 
 button:active {
     animation: activeEffect 0.2s forwards;
-}
-
-.resume-columns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.resume-column {
-    flex: 1;
-    padding: 10px;
-}
-
-.resume-column h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
 }
